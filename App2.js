@@ -1,8 +1,7 @@
-import './App.css';
-import ProductsList from "./components/ProductsList";
+import './styles.css';
+import ProductsList from "./Components/ProductsList";
 import React from 'react';
-class App extends React.Component
-{
+class App extends React.Component{
   state = {
     products: [
       { id: 1, name: "monitor", count: 12 },
@@ -26,28 +25,5 @@ class App extends React.Component
         </div>
   );
   }
-}
+};
 export default App;
-21:34
-import React from 'react';
-class ProductsList extends React.Component
-{
-    handleClick = () =>
-    {
-        this.props.onEliminar("eliminate")
-    }
-    render() 
-    {
-        return ( 
-                <ol>
-        {this.props.products.map( product => {
-            return (
-                <li key={product.id}>{`nombre: ${product.name} - cantidad: ${product.count}`} <span onClick={this.handleClick}>[Eliminar!!]</span></li>
-            )
-        }
-        )}
-    </ol>
-        )
-    }
-}
-export default ProductsList;
