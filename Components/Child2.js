@@ -1,40 +1,22 @@
-import { Component } from "react";
-
-class Child extends Component{
-  
-  handleClick = ()=>
-  {
-    this.props.onEliminar("Eliminate")
-  }
-  
-  frutasEnStock = () => this.props.frutas.filter(fruta => fruta.cantidad > 0).map(fruta => <li>{fruta.nombre}<span onClick{handleClick}>Eliminar!</span></li>)
-
-  frutasSinStock = () => this.props.frutas.filter(fruta => fruta.cantidad === 0).map(fruta => <li>{fruta.nombre}<span onClick{handleClick}>Eliminar!</span></li>)
-
-  render() {
-    return(
-      <div>
-        <h1>
-          Frutas en stock
-        </h1>
-
-        <ul>
-          {this.frutasEnStock()}
-        </ul>
-
-        <h1>
-          Frutas sin stock
-        </h1>
-
-        <ul>
-          {this.frutasSinStock()}
-        </ul>
-
-
-      </div>
-    )
-  }
-
+import React from 'react';
+class ProductsList extends React.Component
+{
+    handleClick = () =>
+    {
+        this.props.onEliminar("eliminate")
+    }
+    render() 
+    {
+        return ( 
+                <ol>
+        {this.props.products.map( product => {
+            return (
+                <li key={product.id}>{`nombre: ${product.name} - cantidad: ${product.count}`} <span onClick={this.handleClick}>[Eliminar!!]</span></li>
+            )
+        }
+        )}
+    </ol>
+        )
+    }
 }
-
-export default Child;
+export default ProductsList;
