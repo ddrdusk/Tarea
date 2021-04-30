@@ -7,16 +7,16 @@ class ProductsList extends React.Component
     }
     render() 
     {
-        return ( 
-                <ol>
-        {this.props.products.map( product => {
+      return ( 
+        <ol>
+          {this.props.products.map( product => {
             return (
-                <li key={product.id}>{`nombre: ${product.name} - cantidad: ${product.count}`} <span onClick={this.handleClick}>[Eliminar!!]</span></li>
+              <li key={product.id}>{`nombre: ${product.name} - cantidad: ${product.count}`} <span onClick={this.handleClick}>[Eliminar!!]</span></li>
             )
-        }
-        )}
-    </ol>
-        )
+          }
+          )}
+        </ol>
+      )
     }
 }
 export default ProductsList;
