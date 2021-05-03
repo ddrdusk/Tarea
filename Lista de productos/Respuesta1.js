@@ -15,8 +15,7 @@ class App extends React.Component{
   {
     const newProductsList = this.state.products.filter( function (product) => product.id !== product.id)
     this.setState({
-      products newProductsList
-      // no escribi rapidamente
+      products: newProductsList
     })
   }
   render() {
