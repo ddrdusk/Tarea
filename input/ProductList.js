@@ -3,8 +3,7 @@
   2 agregar nuevos productos (ID dinamica)
   3 separar form a nuevo componenete
 */
-import logo from './logo.svg';
-import './App.css';
+import './styles.css';
 import ProductsList from "./components/ProductsList";
 import React from 'react';
 class App extends React.Component
@@ -23,7 +22,7 @@ class App extends React.Component
   handleEliminar = (productId) => 
   {
     const newProductsList = this.state.products.filter( (product) =>
-       product.id != productId )
+       product.id !== productId )
     this.setState({
       products: newProductsList
     })
