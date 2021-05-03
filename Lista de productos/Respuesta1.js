@@ -24,6 +24,7 @@ class App extends React.Component{
           <header className="App-header">
             <h3>Todos los productos</h3>
             <ProductsList  products={this.state.products} onEliminar={(mensaje)=> alert(mensaje)} class="mystyle"/>
+        //me olvide de escribir aca
             {/* <h4>Productos sin stock</h4>
             <ProductsList products={this.state.products.filter( (product) => product.count <= 0 )} />
             <h4>Productos con stock</h4>
