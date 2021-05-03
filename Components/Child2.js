@@ -5,12 +5,13 @@ class ProductsList extends React.Component
   handleClick = () =>
   {
     this.props.onEliminar("eliminate")
-    /*filtrar productos*/
+    var element = document.getElementById("borrar");
+    element.classList.toggle("mystyle");
   }
   render()
   {
     return (
-    <ol>
+    <ol id= "borrar">
     {this.props.products.map( product => {
       return (
       <li key={product.id}>{`nombre: ${product.name} - cantidad: ${product.count}`} <span onClick={this.handleClick}>[Eliminar!!]</span></li>
