@@ -19,6 +19,13 @@ class App extends React.Component
     name: 'hola',
     count: 0
   }
+  handleChange = (event) =>{
+    const value = event.target.value;
+    const name = event.target.name;
+    this.setState({
+      [name]: value
+    })
+  }
   handleEliminar = (productId) => 
   {
     const newProductsList = this.state.products.filter( (product) =>
@@ -30,10 +37,15 @@ class App extends React.Component
   handleSubmit = (event) =>
   {
     event.preventDefault();
-    //buscar el ultimo ID y guardar en un const
-    let tamano = this.state.products.length;
-    const newId = this.state.products[tamano-1].id;
-    const newArray=[...this.state.products];
+    //arreglar errores/ que pasa si tano es 0?
+    let tamano = this.state.products.length
+    /*if tamano = 0{
+      const newId = 1
+    }else{
+      const newId = this.state.products[tamano-1].id;
+    }*/
+    
+    const newArray=[...this.state.products]
     newArray.push({id:newId+1, name:"gamer", count:99});
     this.setState({
       products: newArray
@@ -56,12 +68,12 @@ class App extends React.Component
               <input
                 type="text"
                 value={this.state.name}
-                onChange={(event) => this.setState({name: event.target.value})}
+                onChange={this.handleChange}
                 placeholder="name"/>
               <input
                 type="number"
                 value={this.state.count}
-                onChange={(event) => this.setState({count: event.target.value})}
+                onChange={this.handleChange}
                 placeholder="count"/>
               <button type="button" onClick={this.handleCancel}>Cancelar</button>
               <button type="submit" onClick={this.handleSubmit}>Agregar</button>
