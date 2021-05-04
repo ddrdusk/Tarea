@@ -30,7 +30,15 @@ class App extends React.Component
   handleSubmit = (event) =>
   {
     event.preventDefault();
-    console.log("submit");
+    //buscar el ultimo ID y guardar en un const
+    let tamano = this.state.products.length
+    const newId = this.state.products[tamano-1].id
+    const newArray=[...this.state.products]
+    newArray.push({id:newId+1, name:"gamer", count:99});
+    this.setState({
+      products: newArray
+    })
+    console.log(newArray)
   }
   handleCancel = () =>
   {
@@ -53,9 +61,10 @@ class App extends React.Component
               <input
                 type="number"
                 value={this.state.count}
+                onChange={(event) => this.setState({count: event.target.value})}
                 placeholder="count"/>
               <button type="button" onClick={this.handleCancel}>Cancelar</button>
-              <button type="submit">Agregar</button>
+              <button type="submit" onClick={this.handleSubmit}>Agregar</button>
             </form>
             <ProductsList products={this.state.products} onEliminar={this.handleEliminar}/>
             {/* <h4>Productos sin stock</h4>
