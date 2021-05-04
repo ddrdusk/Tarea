@@ -1,0 +1,3 @@
+/*
+hacer una lista de tares que desaparezca cuando apretas un boton
+*/
