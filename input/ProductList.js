@@ -38,15 +38,15 @@ class App extends React.Component
   {
     event.preventDefault();
     //arreglar errores/ que pasa si tano es 0?
-    let tamano = this.state.products.length
-    /*if tamano = 0{
+    /*let tamano = this.state.products.length
+    if tamano = 0{
       const newId = 1
     }else{
       const newId = this.state.products[tamano-1].id;
     }*/
     
     const newArray=[...this.state.products]
-    newArray.push({id:newId+1, name:"gamer", count:99});
+    newArray.push({id:/*newId+*/1, name:"gamer", count:99});
     this.setState({
       products: newArray
     })
