@@ -31,9 +31,9 @@ class App extends React.Component
   {
     event.preventDefault();
     //buscar el ultimo ID y guardar en un const
-    let tamano = this.state.products.length
-    const newId = this.state.products[tamano-1].id
-    const newArray=[...this.state.products]
+    let tamano = this.state.products.length;
+    const newId = this.state.products[tamano-1].id;
+    const newArray=[...this.state.products];
     newArray.push({id:newId+1, name:"gamer", count:99});
     this.setState({
       products: newArray
