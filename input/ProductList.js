@@ -4,7 +4,7 @@
   3 separar form a nuevo componenete
 */
 import './styles.css';
-import ProductsList from "./components/ProductsList";
+import ProductsList from "./Components/ProductsList";
 import React from 'react';
 class App extends React.Component
 {
@@ -37,7 +37,7 @@ class App extends React.Component
   handleSubmit = (event) =>
   {
     event.preventDefault();
-    //arreglar errores/ que pasa si tano es 0?
+    //arreglar errores/ que pasa si tamano es 0?
     let tamano = this.state.products.length
     /*if tamano = 0{
       const newId = 1
