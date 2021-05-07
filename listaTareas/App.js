@@ -10,17 +10,15 @@ export default function App() {
   return (
   <div class="container">
     <div class="page-header">
-      <h1>Fun Facts About Sharks
-        <small>They're Endangered...</small>
-      </h1>
+      <h1>Lista de tareas</h1>
     </div>
     <div class="table table-hover" >
       <table class="table table-hover">
         <thead>
           <tr>
-            <th>Species</th>
-            <th>Diet</th> 
-            <th>Average Length</th>
+            <th>Pendientes</th>
+            <th>Hechas</th> 
+            <th>Total</th>
           </tr>
         </thead>
         <tbody>
@@ -46,11 +44,6 @@ export default function App() {
           </tr>
         </tbody>
       </table>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-footer">
-        Source: http://animals.nationalgeographic.com/animals/sharks/
-      </div>
     </div>
   </div>
   );
