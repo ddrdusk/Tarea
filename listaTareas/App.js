@@ -8,12 +8,12 @@ import "./styles.css";
 
 export default function App() {
   return (
-  <div class="container">
-    <div class="page-header">
+  <div className="container">
+    <div className="page-header">
       <h1>Lista de tareas</h1>
     </div>
-    <div class="table table-hover" >
-      <table class="table table-hover">
+    <div className="table table-hover" >
+      <table className="table table-hover">
         <thead>
           <tr>
             <th>Pendientes</th>
