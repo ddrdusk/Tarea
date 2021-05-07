@@ -23,24 +23,7 @@ export default function App() {
         </thead>
         <tbody>
           <tr>
-            <td>Whale Shark</td>
-            <td>Plankton</td>
-            <td>18 - 32 ft</td>
-          </tr>
-          <tr>
-            <td>Nurse Shark</td>
-            <td>Fish, shrimp, squid</td>
-            <td>7.5 - 10 ft</td>
-          </tr>
-          <tr>
-            <td>Sand Tiger Shark</td>
-            <td>Small fish</td>
-            <td>6.5 - 10.5 ft</td>
-          </tr>
-          <tr>
-            <td>Bull Shark</td>
-            <td>Fish, dolphins, other sharks</td>
-            <td>7 - 11.5 ft</td>
+            <td>a</td>
           </tr>
         </tbody>
       </table>
