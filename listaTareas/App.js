@@ -8,7 +8,7 @@ import "./styles.css";
 
 export default function App() {
   return (
-    <div class="container">
+  <div class="container">
     <div class="page-header">
       <h1>Fun Facts About Sharks
         <small>They're Endangered...</small>
@@ -17,7 +17,7 @@ export default function App() {
     <div class="table table-hover" >
       <table class="table table-hover">
         <thead>
-          <tr>         
+          <tr>
             <th>Species</th>
             <th>Diet</th> 
             <th>Average Length</th>
@@ -48,10 +48,10 @@ export default function App() {
       </table>
     </div>
     <div class="panel panel-default">
-    <div class="panel-footer">
-    Source: http://animals.nationalgeographic.com/animals/sharks/
+      <div class="panel-footer">
+        Source: http://animals.nationalgeographic.com/animals/sharks/
+      </div>
     </div>
-    </div>
-    </div>
+  </div>
   );
 }
