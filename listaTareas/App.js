@@ -6,7 +6,7 @@ que cambie de hecha a pendiente con un boton
 */
 import "./styles.css";
 import React from 'react';
-//import Boton from "./Component/Button"
+import Boton from "./Component/Button"
 class App extends React.Component
 {
   state = {
@@ -33,22 +33,7 @@ class App extends React.Component
           <h1>Lista de Tareas</h1>
         </div>
         <div className="table table-hover" >
-          <table className="table table-hover">
-            <thead>
-              <tr>
-                <th>Pendientes</th>
-                <th>Hechas</th> 
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-              </tr>
-            </tbody>
-          </table>
+        <Boton tareas={this.state.tareas} onEliminar={this.handleEliminar}/>
         </div>
       </div>
     );
