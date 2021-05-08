@@ -18,14 +18,6 @@ class App extends React.Component
       { id: 5, name: "hacer la cama",},
     ]
   }
-  handleEliminar = (tareaId) => 
-  {
-    const newBoton = this.state.tareas.filter( (tarea) =>
-       tarea.id !== tareaId )
-    this.setState({
-      tareas: newBoton
-    })
-  }
   render(){
     return (
       <div className="App">
