@@ -25,7 +25,7 @@ class App extends React.Component
           <h1>Lista de Tareas</h1>
         </div>
         <div className="table table-hover" >
-        <Boton tareas={this.state.tareas} onEliminar={this.handleEliminar}/>
+        <Boton tareas={this.state.tareas}/>
         </div>
       </div>
     );
