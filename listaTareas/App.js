@@ -9,9 +9,7 @@ import React from 'react';
 //import Boton from "./Component/Button"
 class App extends React.Component
 {
-
-
-  /*state = {
+  state = {
     tareas: [
       { id: 1, name: "lavar platos",},
       { id: 2, name: "trapear piso",},
@@ -27,7 +25,7 @@ class App extends React.Component
     this.setState({
       tareas: newBoton
     })
-  }*/
+  }
   render(){
     return (
       <div className="App">
