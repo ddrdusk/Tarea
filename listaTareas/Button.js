@@ -5,8 +5,7 @@ class Boton extends React.Component
 {
   handleClick = () =>
   {
-    this.props.onEliminar("eliminate")
-    var element = document.getElementById("borrar");
+    var element = document.getElementById("lista");
     element.classList.toggle("pendiente");
   }
   render()
@@ -25,8 +24,8 @@ class Boton extends React.Component
             {
               return(
                 <tr>
-                  <td key={tarea.id}/*tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}*/>{`nombre: ${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✓</button></td>
-                  <td key={tarea.id}/*tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}*/>{`nombre: ${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✗</button></td>
+                  <td key={tarea.id} id="lista"/*tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}*/>{`nombre: ${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✓</button></td>
+                  <td key={tarea.id} id="lista"/*tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}*/>{`nombre: ${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✗</button></td>
                   <td key={tarea.id}>{`nombre: ${tarea.name}`}</td>
                 </tr>
               )
