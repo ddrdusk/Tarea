@@ -7,21 +7,31 @@ que cambie de hecha a pendiente con un boton
 import "./styles.css";
 import React from 'react';
 //import Boton from "./Component/Button"
+//class App extends React.Component
+//{
 
 export default function App() {
   /*state = {
-    products: [
-      { id: 1, name: "monitor", count: 12 },
-      { id: 2, name: "impresora", count: 1 },
-      { id: 3, name: "mouse", count: 33 },
-      { id: 4, name: "alcohol", count: 0 },
-      { id: 5, name: "cap", count: 0 },
+    tareas: [
+      { id: 1, name: "lavar platos",},
+      { id: 2, name: "trapear piso",},
+      { id: 3, name: "programar una lista",},
+      { id: 4, name: "comprar comida",},
+      { id: 5, name: "hacer la cama",},
     ]
+  }
+  handleEliminar = (tareaId) => 
+  {
+    const newBoton = this.state.tareas.filter( (tarea) =>
+       tarea.id !== tareaId )
+    this.setState({
+      tareas: newBoton
+    })
   }*/
   return (
   <div className="container">
     <div className="page-header">
-      <h1>Lista de tareas</h1>
+      <h1>Lista de Tareas</h1>
     </div>
     <div className="table table-hover" >
       <table className="table table-hover">
@@ -35,10 +45,13 @@ export default function App() {
         <tbody>
           <tr>
             <td>a</td>
+            <td>a</td>
+            <td>a</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
   );
-}//</Boton>
+}//<Boton tareas={this.state.tareas} onEliminar={this.handleEliminar}/>
+//export default App;
