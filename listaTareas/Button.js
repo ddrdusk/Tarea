@@ -3,10 +3,11 @@
 import React from 'react';
 class Boton extends React.Component
 {
-  handleClick = () =>
+  handleClick = (/*tareaId*/) =>
   {
     var element = document.getElementById("lista");
     element.classList.toggle("pendiente");
+    //this.props.onEliminar(tareaId)
   }
   render()
   {
