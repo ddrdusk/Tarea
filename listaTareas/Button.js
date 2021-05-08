@@ -7,7 +7,7 @@ class Boton extends React.Component
   {
     this.props.onEliminar("eliminate")
     var element = document.getElementById("borrar");
-    element.classList.toggle("mystyle");
+    element.classList.toggle("pendiente");
   }
   render()
   {
