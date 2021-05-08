@@ -18,6 +18,14 @@ class App extends React.Component
       { id: 5, name: "Hacer la cama",},
     ]
   }
+  /*handleEliminar = (tareaId) => 
+  {
+    const newBoton = this.state.tareas.filter( (tarea) =>
+    tarea.id !== tareaId )
+    this.setState({
+      tareas: newBoton
+    })
+  }*/
   render(){
     return (
       <div className="App">
@@ -25,7 +33,7 @@ class App extends React.Component
           <h1>Lista de Tareas</h1>
         </div>
         <div className="table table-hover" >
-        <Boton tareas={this.state.tareas}/>
+        <Boton tareas={this.state.tareas} /*onEliminar={this.handleEliminar}*//>
         </div>
       </div>
     );
