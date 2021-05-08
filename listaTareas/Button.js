@@ -3,9 +3,11 @@
 import React from 'react';
 class Boton extends React.Component
 {
-  handleClick = (tareaId) =>
+  handleClick = () =>
   {
-    this.props.onEliminar(tareaId)
+    this.props.onEliminar("eliminate")
+    var element = document.getElementById("borrar");
+    element.classList.toggle("mystyle");
   }
   render()
   {
