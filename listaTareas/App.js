@@ -30,29 +30,29 @@ export default function App() {
   }*/
   //render(){
     return (
-    <div className="container">
-      <div className="page-header">
-        <h1>Lista de Tareas</h1>
+      <div className="container">
+        <div className="page-header">
+          <h1>Lista de Tareas</h1>
+        </div>
+        <div className="table table-hover" >
+          <table className="table table-hover">
+            <thead>
+              <tr>
+                <th>Pendientes</th>
+                <th>Hechas</th> 
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div className="table table-hover" >
-        <table className="table table-hover">
-          <thead>
-            <tr>
-              <th>Pendientes</th>
-              <th>Hechas</th> 
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>a</td>
-              <td>a</td>
-              <td>a</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
     );
   //}
 }//<Boton tareas={this.state.tareas} onEliminar={this.handleEliminar}/>
