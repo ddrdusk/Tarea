@@ -11,11 +11,11 @@ class App extends React.Component
 {
   state = {
     tareas: [
-      { id: 1, name: "lavar platos",},
-      { id: 2, name: "trapear piso",},
-      { id: 3, name: "programar una lista",},
-      { id: 4, name: "comprar comida",},
-      { id: 5, name: "hacer la cama",},
+      { id: 1, name: "Lavar platos",},
+      { id: 2, name: "Trapear piso",},
+      { id: 3, name: "Programar una lista",},
+      { id: 4, name: "Comprar comida",},
+      { id: 5, name: "Hacer la cama",},
     ]
   }
   render(){
