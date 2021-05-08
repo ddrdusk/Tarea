@@ -3,22 +3,35 @@
 import React from 'react';
 class Boton extends React.Component
 {
-  handleClick = (productId) =>
+  handleClick = (tareaId) =>
   {
-    this.props.onEliminar(productId)
+    this.props.onEliminar(tareaId)
   }
   render()
   {
     return (
-      <ul>
-        {this.props.products.map( product => 
-          {
-            return (
-              <li key={product.id}>{`nombre: ${product.name} - cantidad: ${product.count}`} <span onClick={() => this.handleClick(product.id)}>[Eliminar!!]</span></li>
-            )
-          }
-        )}
-      </ul>
+      <table className="table table-hover">
+        <thead>
+          <tr>
+            <th>Pendientes</th>
+            <th>Hechas</th> 
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.props.tareas.map( tarea =>
+            {
+              return(
+                <tr>
+                  <td key={tarea.id} tareas={this.state.tareas.filter( (tarea) => tarea.class === "pendiente" )}>{`nombre: ${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>a</button></td>
+                  <td key={tarea.id} tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}>{`nombre: ${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>a</button></td>
+                  <td key={tarea.id}>{`nombre: ${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>a</button></td>
+                </tr>
+              )
+            }
+          )}
+        </tbody>
+      </table>
     )
   }
 }
