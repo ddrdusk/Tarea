@@ -7,10 +7,10 @@ que cambie de hecha a pendiente con un boton
 import "./styles.css";
 import React from 'react';
 //import Boton from "./Component/Button"
-//class App extends React.Component
-//{
+class App extends React.Component
+{
 
-export default function App() {
+
   /*state = {
     tareas: [
       { id: 1, name: "lavar platos",},
@@ -28,9 +28,9 @@ export default function App() {
       tareas: newBoton
     })
   }*/
-  //render(){
+  render(){
     return (
-      <div className="container">
+      <div className="App">
         <div className="page-header">
           <h1>Lista de Tareas</h1>
         </div>
@@ -54,6 +54,6 @@ export default function App() {
         </div>
       </div>
     );
-  //}
+  }
 }//<Boton tareas={this.state.tareas} onEliminar={this.handleEliminar}/>
-//export default App;
+export default App;
