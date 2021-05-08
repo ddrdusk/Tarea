@@ -30,5 +30,5 @@ class App extends React.Component
       </div>
     );
   }
-}//<Boton tareas={this.state.tareas} onEliminar={this.handleEliminar}/>
+}
 export default App;
