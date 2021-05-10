@@ -3,6 +3,7 @@ hacer 3 listas de tareas
 una de terminadas
 otra de pendientes y otra para todas
 que cambie de hecha a pendiente con un boton
+si una lista se vacia hacer que sea una sola lista
 */
 import "./styles.css";
 import React from 'react';
