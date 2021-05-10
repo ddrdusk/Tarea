@@ -28,10 +28,10 @@ class Boton extends React.Component
                   <td key={tarea.id} id="lista"/*tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}*/>{`${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✓</button></td>
                   <td key={tarea.id} id="lista"/*tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}*/>{`${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✗</button></td>
                   <td key={tarea.id}>{`${tarea.name}`}</td>
-                  /*<td
-                    onClick={() => {this.props.handleClick(); this.setState({isClicked: true});}}
-                    className={this.state.isClicked ? "wall" : "grid"}
-                  </td>*/
+                  <td
+                    /*onClick={() => {this.props.handleClick(); this.setState({isClicked: true});}}
+                    className={this.state.isClicked ? "wall" : "grid"}*/>
+                  </td>
                 </tr>
               )
             }
