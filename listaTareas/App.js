@@ -12,21 +12,21 @@ class App extends React.Component
 {
   state = {
     tareas: [
-      { id: 1, name: "Lavar platos",},
-      { id: 2, name: "Trapear piso",},
-      { id: 3, name: "Programar una lista",},
-      { id: 4, name: "Comprar comida",},
-      { id: 5, name: "Hacer la cama",},
+      { id: 1, name: "Lavar platos", state:"hecho",},
+      { id: 2, name: "Trapear piso", state:"hecho",},
+      { id: 3, name: "Programar una lista", state:"pendiente",},
+      { id: 4, name: "Comprar comida", state:"pendiente",},
+      { id: 5, name: "Hacer la cama", state:"pendiente",},
     ]
   }
-  /*handleEliminar = (tareaId) => 
+  handleEliminar = (tareaId) => 
   {
     const newBoton = this.state.tareas.filter( (tarea) =>
     tarea.id !== tareaId )
     this.setState({
       tareas: newBoton
     })
-  }*/
+  }
   render(){
     return (
       <div className="App">
@@ -34,7 +34,7 @@ class App extends React.Component
           <h1>Lista de Tareas</h1>
         </div>
         <div className="table table-hover" >
-        <Boton tareas={this.state.tareas} /*onEliminar={this.handleEliminar}*//>
+          <Boton tareas={this.state.tareas.filter( (tarea) => tarea.state ==="pendiente")} onEliminar={this.handleEliminar}/>
         </div>
       </div>
     );
