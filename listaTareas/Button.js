@@ -3,11 +3,11 @@
 import React from 'react';
 class Boton extends React.Component
 {
-  handleClick = (/*tareaId*/) =>
+  handleClick = (tareaId) =>
   {
-    var element = document.getElementById("lista");
-    element.classList.toggle("pendiente");
-    //this.props.onEliminar(tareaId)
+    /*var element = document.getElementById("lista");
+    element.classList.toggle("pendiente");*/
+    this.props.onEliminar(tareaId)
   }
   render()
   {
@@ -26,8 +26,6 @@ class Boton extends React.Component
               return(
                 <tr>
                   <td key={tarea.id} id="lista"/*tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}*/>{`${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✓</button></td>
-                  <td key={tarea.id} id="lista"/*tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}*/>{`${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✗</button></td>
-                  <td key={tarea.id}>{`${tarea.name}`}</td>
                   <td
                     /*onClick={() => {this.props.handleClick(); this.setState({isClicked: true});}}
                     className={this.state.isClicked ? "wall" : "grid"}*/>
