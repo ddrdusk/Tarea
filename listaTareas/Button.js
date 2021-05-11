@@ -5,8 +5,6 @@ class Boton extends React.Component
 {
   handleClick = (tareaId) =>
   {
-    /*var element = document.getElementById("lista");
-    element.classList.toggle("pendiente");*/
     this.props.onEliminar(tareaId)
   }
   render()
@@ -25,11 +23,7 @@ class Boton extends React.Component
             {
               return(
                 <tr>
-                  <td key={tarea.id} id="lista"/*tareas={this.state.tareas.filter( (tarea) => tarea.class !== "pendiente" )}*/>{`${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✓</button></td>
-                  <td
-                    /*onClick={() => {this.props.handleClick(); this.setState({isClicked: true});}}
-                    className={this.state.isClicked ? "wall" : "grid"}*/>
-                  </td>
+                  <td key={tarea.id}>{`${tarea.name}`} <button onClick={() => this.handleClick(tarea.id)}>✓</button></td>
                 </tr>
               )
             }
