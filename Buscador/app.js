@@ -1,3 +1,0 @@
-/*hacer una app que busque por ID
-diga si existe y el estado de entrega
-hacer que guarde el historial de busqueda*/
