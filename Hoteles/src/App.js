@@ -1,11 +1,19 @@
-//cambiar todo, duh
+//??? lo de ariba???
 import "./styles.css";
-
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
+import React from 'react';
+import Titulo from "./Components/Titulo"
+class App extends React.Component
+{
+  
+  render(){
+    return (
+      <div className="App">
+        <div className="page-header">
+          <Titulo/>
+        </div>
+        <h1>a</h1>
+      </div>
+    );
+  }
 }
+export default App;
