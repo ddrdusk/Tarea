@@ -1,4 +1,24 @@
 //Hacer props
+/*
+  function App() {
+    const filters = {
+      dateFrom: today, // Proviene del archivo data.js
+      dateTo: new Date(today.valueOf() + 86400000),
+      country: undefined,
+      price: undefined,
+      rooms: undefined
+    }
+
+    return (
+      <div>
+        <Hero filters={ filters } />
+        <Filters filters={ filters } />
+      </div>
+    )
+  }
+
+  ReactDOM.render(<App />, document.getElementById('app'))
+*/
 import React from 'react';
 import OptionsFilter from ".Components/OptionsFilter"
 import DateFilter from ".Components/DateFilter"
